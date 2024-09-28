@@ -15,3 +15,19 @@ if find_armstrong(135):
 else:
     print("No this is not armstrong number") 
 
+## finding dublicate chars
+
+def find_dup(chars :str):
+    seen = set()
+    duplicate = []
+
+    for char in chars:
+        if char not in seen:
+            seen.add(char) 
+        else:
+            duplicate.append(char) 
+
+
+    return duplicate 
+
+find_dup("aabdbABC")
