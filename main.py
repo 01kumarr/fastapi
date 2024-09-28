@@ -10,4 +10,11 @@ def find_armstrong(num : int):
 
     return num == _sum 
 
+if find_armstrong(135):
+    print("yes this is the armstrong number")
+else:
+    print("No this is not armstrong number") 
+
+
+
 
