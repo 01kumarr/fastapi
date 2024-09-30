@@ -9,5 +9,5 @@ class Todos(Base):
     id = Column(Integer, primary_key=True, index=True) 
     title = Column(String)
     description = Column(String) 
-    priority = Column(String) 
-    complete = Column(String) 
+    priority = Column(String)
+    complete = Column(Boolean) 
