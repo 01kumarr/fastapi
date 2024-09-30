@@ -7,7 +7,7 @@ class Todos(Base):
     __tablename__ = "todos"
 
     id = Column(Integer, primary_key=True, index=True) 
-    titel = Column(String)
+    title = Column(String)
     description = Column(String) 
-    priority = Column(String) 
-    complete = Column(String) 
+    priority = Column(String)
+    complete = Column(Boolean) 
