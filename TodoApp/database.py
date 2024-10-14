@@ -1,10 +1,11 @@
+## this file is used to initialize and create main database
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 from sqlalchemy.ext.declarative import declarative_base
 
 
 ## database location in sqlite..with name (todos)
-SQLALCHEMY_DATABASE_URL = 'sqlite:///./todos.db' 
+SQLALCHEMY_DATABASE_URL = 'sqlite:///./todosapp.db' 
 
 # create an engine to communicate with database
 engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={'check_same_thread': False}) 
