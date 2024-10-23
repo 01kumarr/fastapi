@@ -1,7 +1,7 @@
 from typing import Annotated
 from sqlalchemy.orm import Session 
 from fastapi import APIRouter, Depends, HTTPException
-from models import Todos
+from models import Todos, Users
 from database import SessionLocal
 from starlette import status
 from pydantic import BaseModel 
