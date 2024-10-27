@@ -4,5 +4,6 @@ sqlalchemy
 uvicorn
 passlib
 bcrypt==4.0.1
-python-multipart 
+python-multipart
+alembic
 "python-jose[cryptography]"
