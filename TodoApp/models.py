@@ -15,6 +15,7 @@ class Users(Base):
     hashed_password = Column(String) 
     is_active = Column(Boolean, default=True) 
     role = Column(String)
+    mobile_number = Column(String)
 
 ## creating a model class by inheriting base class from declarative_base..
 class Todos(Base):
