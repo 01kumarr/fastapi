@@ -61,7 +61,7 @@ async def get_current_user(token : Annotated[str, Depends(oauth2_bearer)]):
         if username is None or user_id is None:
             raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, 
                                 detail="Could not validate user") 
-        return {'username':username, 'id':user_id, 'role':user_role} 
+        return {'username':username, 'id':user_id, 'user_role':user_role} 
     except JWTError:
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, 
                                 detail="Could not validate user")
@@ -84,9 +84,6 @@ class Token(BaseModel):
     access_token :str
     token_type:str 
 
-@router.get("/", status_code=status.HTTP_200_OK)
-async def read_db(db: db_dependancy):
-    return db.query(Users).all()
 
 ## hasing password before adding them into database...
 @router.post("/", status_code=status.HTTP_201_CREATED)
