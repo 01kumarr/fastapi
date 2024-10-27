@@ -90,7 +90,7 @@ class Token(BaseModel):
 async def create_user(db : db_dependancy, create_user_request : CreateUserRequest):
     try:
         exsiting_user = db.query(Users).filter(Users.username == create_user_request.username)
-        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="User already exists") 
+        raise HTTPException(status_code=status.HTTP_409_CONFLICT, detail="username already exists") 
     
     except NoResultFound:
         create_user_model = Users(
